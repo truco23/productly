@@ -1,18 +1,12 @@
 'use strict';
 
 module.exports = {
-  descirption: 'Create component in reactjs',
+  descirption: 'Create shared component in reactjs',
   prompts: [
     {
       type: 'input',
       name: 'name',
       message: 'Whats your name component?',
-      default: 'Default',
-    },
-    {
-      type: 'input',
-      name: 'module',
-      message: 'Whats your name page?',
       default: 'Default',
     },
     {
@@ -39,19 +33,19 @@ module.exports = {
       actions = [
         {
           type: 'add',
-          path: `../src/pages/{{properCase module}}/components/{{properCase name}}/{{properCase name}}.tsx`,
-          templateFile: `./components/class/index.js.hbs`,
+          path: `../src/shared/components/{{properCase name}}/{{properCase name}}.tsx`,
+          templateFile: `./shared/class/index.js.hbs`,
           abortOnFail: true,
         },
         {
           type: 'add',
-          path: `../src/pages/{{properCase module}}/components/{{properCase name}}/{{lowerCase name}}.scss`,
+          path: `../src/shared/components/{{properCase name}}/{{lowerCase name}}.scss`,
           templateFile: ``,
           abortOnFail: true,
         },
         {
           type: 'append',
-          path: `../src/pages/{{properCase module}}/components/{{properCase name}}/{{properCase name}}.tsx`,
+          path: `../src/shared/components/{{properCase name}}/{{properCase name}}.tsx`,
           pattern: '// imports',
           template: `import './{{lowerCase name}}.scss';`,
         },
@@ -60,19 +54,19 @@ module.exports = {
       actions = [
         {
           type: 'add',
-          path: `../src/pages/{{properCase module}}/components/{{properCase name}}/{{properCase name}}.tsx`,
-          templateFile: `./components/function/index.js.hbs`,
+          path: `../src/shared/components/{{properCase name}}/{{properCase name}}.tsx`,
+          templateFile: `./shared/function/index.js.hbs`,
           abortOnFail: true,
         },
         {
           type: 'add',
-          path: `../src/pages/{{properCase module}}/components/{{properCase name}}/{{lowerCase name}}.scss`,
+          path: `../src/shared/components/{{properCase name}}/{{lowerCase name}}.scss`,
           templateFile: ``,
           abortOnFail: true,
         },
         {
           type: 'append',
-          path: `../src/pages/{{properCase module}}/components/{{properCase name}}/{{properCase name}}.tsx`,
+          path: `../src/shared/components/{{properCase name}}/{{properCase name}}.tsx`,
           pattern: '// imports',
           template: `import './{{lowerCase name}}.scss';`,
         },
