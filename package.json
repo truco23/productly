@@ -2,6 +2,7 @@
   "name": "productly",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://truco23.github.io/productly",
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
@@ -18,7 +19,9 @@
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
     "commitizen": "^4.0.4",
+    "concurrently": "^5.2.0",
     "eslint": "^6.8.0",
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.14.0",
     "plop": "^2.6.0",
     "react": "^16.13.1",
@@ -32,6 +35,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "publish": "./node_modules/.bin/gh-pages -d build",
+    "deploy": "concurrently \"npm run build\" \"npm run publish\"",
     "c": "git-cz",
     "generate": "plop --plopfile generators/index.js"
   },
