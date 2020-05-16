@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC, useState } from 'react';
 import { Row, Container, Visible, Col } from 'react-grid-system';
 // imports
 import './header.scss';
