@@ -6,18 +6,74 @@
 .banner-descritpiton {
 }
 
-.banner-descritpiton-title {
+.banner-description-title {
+  color: $gray-secondary;
   font-style: normal;
   font-weight: bold;
-  font-size: 44px;
-  color: $gray-secondary;
+  font-size: 4.4rem;
 }
 
-.banner-descritpiton-text {
+.banner-description-text {
+  color: $gray-thirty;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8rem;
+  margin: 4rem 0rem;
 }
 
-.banner-descritpiton-getStated {
+.banner-description-buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
-.banner-descritpiton-watchVideo {
+.banner-description-getStarted {
+  background: $orange-primary;
+  border: 0;
+  border-radius: 4rem;
+  color: $white-primary;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding: 1.5rem 4rem;
+}
+
+.banner-description-icon {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid $orange-primary;
+  border-bottom: 10px solid transparent;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+
+.banner-description-watchVideo {
+  background: none;
+  border: 0;
+  color: $orange-primary;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-decoration-line: underline;
+}
+
+.banner-image {
+  position: relative;
+  margin-top: 4rem;
+}
+
+.banner-image-oval {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translate(-50%, 1rem);
+  width: 90%;
+  z-index: 1;
+}
+
+.banner-imagem-people {
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }
