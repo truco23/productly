@@ -1,13 +1,5 @@
 @import "../../../utils/scss/screen.scss";
-
-// colors
-$gray-primary: #173a56;
-$gray-secondary: #bcd0e5;
-$gray-thirty: #2f281e;
-
-$orange-primary: #ff9900;
-
-$white-primary: #fff;
+@import "../../../utils/scss/colors.scss";
 
 // header
 .header {
@@ -28,7 +20,7 @@ $white-primary: #fff;
 
 // menu
 .header-menu {
-  background: #fff;
+  background: $white-primary;
 }
 
 .header-menu-small {
@@ -47,7 +39,7 @@ $white-primary: #fff;
 }
 
 .header-menu-link {
-  color: $gray-thirty;
+  color: $gray-secondary;
   font-size: 14px;
   text-decoration: none;
   padding: 15px;
@@ -115,7 +107,7 @@ $white-primary: #fff;
 }
 
 .header-btn-signin {
-  border: 1px solid $gray-secondary;
+  border: 1px solid $blue-primary;
   color: $gray-primary;
   margin-right: 10px;
 }

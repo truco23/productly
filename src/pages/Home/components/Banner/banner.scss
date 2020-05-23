@@ -1,11 +1,23 @@
-.banner {}
+@import "../../../../utils/scss/colors.scss";
 
-.banner-descritpiton {}
+.banner {
+}
 
-.banner-descritpiton-title {}
+.banner-descritpiton {
+}
 
-.banner-descritpiton-text {}
+.banner-descritpiton-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 44px;
+  color: $gray-secondary;
+}
 
-.banner-descritpiton-getStated {}
+.banner-descritpiton-text {
+}
 
-.banner-descritpiton-watchVideo {}
+.banner-descritpiton-getStated {
+}
+
+.banner-descritpiton-watchVideo {
+}

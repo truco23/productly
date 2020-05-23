@@ -7,7 +7,7 @@ function Page() {
     <section>
       <Header />
       {/* pages */}
-       <Home />
+      <Home />
     </section>
   );
 }

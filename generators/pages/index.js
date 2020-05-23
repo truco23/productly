@@ -44,6 +44,12 @@ module.exports = {
           abortOnFail: true,
         },
         {
+          type: 'add',
+          path: `../src/translations/en/{{lowerCase name}}.json`,
+          templateFile: `./pages/class/translate.js.hbs`,
+          abortOnFail: true,
+        },
+        {
           type: 'append',
           path: `../src/pages/{{properCase name}}/{{properCase name}}.tsx`,
           pattern: '// imports',
@@ -60,6 +66,30 @@ module.exports = {
           path: `../src/pages/index.tsx`,
           pattern: '{/* pages */}',
           template: `       <{{properCase name}} />`,
+        },
+        {
+          type: 'append',
+          path: `../src/translations/translation.js`,
+          pattern: '// imports',
+          template: `import {{lowerCase name}} from './en/{{lowerCase name}}.json' `,
+        },
+        {
+          type: 'append',
+          path: `../src/translations/translation.js`,
+          pattern: '// exports',
+          template: `  {{lowerCase name}},`,
+        },
+        {
+          type: 'append',
+          path: `../src/i18n.js`,
+          pattern: '// imports',
+          template: `  {{lowerCase name}},`,
+        },
+        {
+          type: 'append',
+          path: `../src/i18n.js`,
+          pattern: '// en',
+          template: `      {{lowerCase name}},`,
         },
       ];
     } else {
@@ -77,6 +107,18 @@ module.exports = {
           abortOnFail: true,
         },
         {
+          type: 'add',
+          path: `../src/translations/en/{{lowerCase name}}.json`,
+          templateFile: `./pages/function/translate.js.hbs`,
+          abortOnFail: true,
+        },
+        {
+          type: 'append',
+          path: `../src/pages/{{properCase name}}/{{properCase name}}.tsx`,
+          pattern: '// imports',
+          template: `import './{{lowerCase name}}.scss';`,
+        },
+        {
           type: 'append',
           path: `../src/pages/{{properCase name}}/{{properCase name}}.tsx`,
           pattern: '// imports',
@@ -93,6 +135,30 @@ module.exports = {
           path: `../src/pages/index.tsx`,
           pattern: '{/* pages */}',
           template: `       <{{properCase name}} />`,
+        },
+        {
+          type: 'append',
+          path: `../src/translations/translation.js`,
+          pattern: '// imports',
+          template: `import {{lowerCase name}} from './en/{{lowerCase name}}.json' `,
+        },
+        {
+          type: 'append',
+          path: `../src/translations/translation.js`,
+          pattern: '// exports',
+          template: `  {{lowerCase name}},`,
+        },
+        {
+          type: 'append',
+          path: `../src/i18n.js`,
+          pattern: '// imports',
+          template: `  {{lowerCase name}},`,
+        },
+        {
+          type: 'append',
+          path: `../src/i18n.js`,
+          pattern: '// en',
+          template: `      {{lowerCase name}},`,
         },
       ];
     }

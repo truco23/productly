@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { t } from '../../../../i18n';
 
 // imports
 import './banner.scss';
@@ -8,12 +9,12 @@ export interface BannerProps { }
 const Description = () => {
   return (
     <div className={'banner-descritpiton'}>
-      <h1 className={'banner-description-title'}>The Design Thinking superpowers</h1>
-      <p className={'banner-description-text'}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      <button className={'banner-description-getStarted'}>Get Started</button>
+      <h1 className={'banner-description-title'}>{t('banner:title')}</h1>
+      <p className={'banner-description-text'}>{t('banner:description')}</p>
+      <button className={'banner-description-getStarted'}>{t('banner:get_started')}</button>
       <button className={'banner-description-watchVideo'}>
         <span>></span>
-        Watch the video
+        {t('banner:watch_video')}
       </button>
     </div>
   )
