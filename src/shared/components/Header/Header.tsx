@@ -4,6 +4,7 @@ import { Row, Container, Visible, Col } from 'react-grid-system';
 import './header.scss';
 import logo from '../../../utils/images/logo.svg';
 import { menu } from '../../../utils/helpers/menu'
+
 export interface HeaderProps { }
 
 const Logo = () => {
@@ -21,13 +22,17 @@ const MenuSmall = () => {
   return (
     <>
       <Visible xs sm md>
-        <span className="header-menu-open" onClick={() => setMenuToggle(!meunuToggle)}>open</span>
+        <div className="header-menu-open" onClick={() => setMenuToggle(!meunuToggle)}>
+          <span className={'header-icon-burguer'}></span>
+          <span className={'header-icon-burguer'}></span>
+          <span className={'header-icon-burguer'}></span>
+        </div>
       </Visible>
 
       <ul
         className={`header-menu header-menu-small ${meunuToggle ? 'show' : 'hide'}`}
         onClick={() => setMenuToggle(!meunuToggle)}>
-        <li className="header-menu-close">close</li>
+        <li className="header-menu-close">X</li>
         {
           menu.map(item => (
             <li key={item.item}>
@@ -65,7 +70,6 @@ const MenuDefault = () => {
 }
 
 const Menu = () => {
-
   return (
     <>
       <Visible xs sm md>
