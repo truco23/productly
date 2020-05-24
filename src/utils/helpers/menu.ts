@@ -29,4 +29,4 @@ export const menu: MenuInterface[] = [
     link: 'resources',
     active: false
   }
-]
+];

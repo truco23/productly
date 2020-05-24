@@ -50,6 +50,12 @@ module.exports = {
           abortOnFail: true,
         },
         {
+          type: 'add',
+          path: `../src/stories/1-{{properCase name}}.stories.js`,
+          templateFile: `./components/class/stories.js.hbs`,
+          abortOnFail: true,
+        },
+        {
           type: 'append',
           path: `../src/pages/{{properCase module}}/components/{{properCase name}}/{{properCase name}}.tsx`,
           pattern: '// imports',
@@ -68,6 +74,12 @@ module.exports = {
           type: 'add',
           path: `../src/pages/{{properCase module}}/components/{{properCase name}}/{{lowerCase name}}.scss`,
           templateFile: ``,
+          abortOnFail: true,
+        },
+        {
+          type: 'add',
+          path: `../src/stories/1-{{properCase name}}.stories.js`,
+          templateFile: `./components/function/stories.js.hbs`,
           abortOnFail: true,
         },
         {
