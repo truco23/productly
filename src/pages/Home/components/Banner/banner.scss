@@ -1,6 +1,12 @@
 @import "../../../../utils/scss/colors.scss";
+@import "../../../../utils/scss/screen.scss";
 
 .banner {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $desktop) {
+    flex-direction: row;
+  }
 }
 
 .banner-descritpiton {
@@ -24,6 +30,9 @@
 .banner-description-buttons {
   display: flex;
   justify-content: space-between;
+  @media (min-width: $tablet) {
+    justify-content: center;
+  }
 }
 
 .banner-description-getStarted {
@@ -35,6 +44,9 @@
   font-weight: bold;
   font-size: 1.6rem;
   padding: 1.5rem 4rem;
+  @media (min-width: $tablet) {
+    margin-right: 4rem;
+  }
 }
 
 .banner-description-icon {
@@ -61,6 +73,9 @@
 .banner-image {
   position: relative;
   margin-top: 4rem;
+  @media (min-width: $desktop) {
+    margin-left: 4rem;
+  }
 }
 
 .banner-image-oval {
@@ -76,4 +91,7 @@
   position: relative;
   width: 100%;
   z-index: 1;
+  @media (min-width: $desktop) {
+    width: 40rem;
+  }
 }
