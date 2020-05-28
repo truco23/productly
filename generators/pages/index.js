@@ -50,6 +50,12 @@ module.exports = {
           abortOnFail: true,
         },
         {
+          type: 'add',
+          path: `../cypress/integration/{{lowerCase name}}/{{lowerCase name}}.spec.js`,
+          templateFile: `./pages/class/test.js.hbs`,
+          abortOnFail: true,
+        },
+        {
           type: 'append',
           path: `../src/pages/{{properCase name}}/{{properCase name}}.tsx`,
           pattern: '// imports',
@@ -117,6 +123,12 @@ module.exports = {
           path: `../src/pages/{{properCase name}}/{{properCase name}}.tsx`,
           pattern: '// imports',
           template: `import './{{lowerCase name}}.scss';`,
+        },
+        {
+          type: 'add',
+          path: `../cypress/integration/{{lowerCase name}}/{{lowerCase name}}.spec.js`,
+          templateFile: `./pages/function/test.js.hbs`,
+          abortOnFail: true,
         },
         {
           type: 'append',

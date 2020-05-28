@@ -50,6 +50,12 @@ module.exports = {
           abortOnFail: true,
         },
         {
+          type: 'add',
+          path: `../cypress/integration/{{lowerCase name}}/{{lowerCase name}}.spec.js`,
+          templateFile: `./shared/class/test.js.hbs`,
+          abortOnFail: true,
+        },
+        {
           type: 'append',
           path: `../src/shared/components/{{properCase name}}/{{properCase name}}.tsx`,
           pattern: '// imports',
@@ -74,6 +80,12 @@ module.exports = {
           type: 'add',
           path: `../src/stories/1-{{properCase name}}.stories.js`,
           templateFile: `./shared/function/stories.js.hbs`,
+          abortOnFail: true,
+        },
+        {
+          type: 'add',
+          path: `../cypress/integration/{{lowerCase name}}/{{lowerCase name}}.spec.js`,
+          templateFile: `./shared/function/test.js.hbs`,
           abortOnFail: true,
         },
         {
