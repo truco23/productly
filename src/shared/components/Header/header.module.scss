@@ -1,5 +1,5 @@
-@import "../../../utils/scss/screen.scss";
-@import "../../../utils/scss/colors.scss";
+@import '../../../utils/scss/screen.scss';
+@import '../../../utils/scss/colors.scss';
 
 // header
 .header {
@@ -7,7 +7,8 @@
 }
 
 // nav
-.header-nav {
+.header_nav {
+  display: flex;
   padding: 15px 0;
   justify-content: center;
   align-items: center;
@@ -19,11 +20,11 @@
 }
 
 // menu
-.header-menu {
+.header_menu {
   background: $white-primary;
 }
 
-.header-icon-burguer {
+.header_icon_burguer {
   background-color: $gray-secondary;
   display: block;
   height: 4px;
@@ -31,7 +32,7 @@
   width: 30px;
 }
 
-.header-menu-small {
+.header_menu_small {
   padding-top: 40px;
   top: 100px;
   width: 280px;
@@ -42,11 +43,11 @@
   position: fixed;
 }
 
-.header-menu-default {
+.header_menu_default {
   display: flex;
 }
 
-.header-menu-link {
+.header_menu_link {
   color: $gray-secondary;
   font-size: 14px;
   text-decoration: none;
@@ -81,7 +82,7 @@
   z-index: 2;
 }
 
-.header-menu-open {
+.header_menu_open {
   position: absolute;
   top: -37px;
   right: 15px;
@@ -90,7 +91,7 @@
   }
 }
 
-.header-menu-close {
+.header_menu_close {
   font-weight: 600;
   font-size: 2rem;
   position: absolute;
@@ -99,7 +100,7 @@
 }
 
 // authenticate
-.header-wrapper-authenticate {
+.header_wrapper_authenticate {
   @media (min-width: $tablet) {
     margin-right: 60px;
   }
@@ -109,20 +110,20 @@
   }
 }
 
-.header-btn {
+.header_btn {
   background: none;
   border: 0;
   border-radius: 5px;
   padding: 10px 30px;
 }
 
-.header-btn-signin {
+.header_btn_signin {
   border: 1px solid $blue-primary;
   color: $gray-primary;
   margin-right: 10px;
 }
 
-.header-btn-signup {
+.header_btn_signup {
   background: $orange-primary;
   border: 1px solid $orange-primary;
   color: $white-primary;

@@ -1,5 +1,5 @@
-@import "../../../../utils/scss/colors.scss";
-@import "../../../../utils/scss/screen.scss";
+@import '../../../../utils/scss/colors.scss';
+@import '../../../../utils/scss/screen.scss';
 
 .banner {
   display: flex;
@@ -9,17 +9,14 @@
   }
 }
 
-.banner-descritpiton {
-}
-
-.banner-description-title {
+.banner_description_title {
   color: $gray-secondary;
   font-style: normal;
   font-weight: bold;
   font-size: 4.4rem;
 }
 
-.banner-description-text {
+.banner_description_text {
   color: $gray-thirty;
   font-style: normal;
   font-weight: normal;
@@ -27,7 +24,7 @@
   margin: 4rem 0rem;
 }
 
-.banner-description-buttons {
+.banner_description_buttons {
   display: flex;
   justify-content: space-between;
   @media (min-width: $tablet) {
@@ -35,7 +32,7 @@
   }
 }
 
-.banner-description-getStarted {
+.banner_description_getStarted {
   background: $orange-primary;
   border: 0;
   border-radius: 4rem;
@@ -49,7 +46,7 @@
   }
 }
 
-.banner-description-icon {
+.banner_description_icon {
   display: inline-block;
   width: 0;
   height: 0;
@@ -60,7 +57,7 @@
   margin-right: 1rem;
 }
 
-.banner-description-watchVideo {
+.banner_description_watchVideo {
   background: none;
   border: 0;
   color: $orange-primary;
@@ -70,7 +67,7 @@
   text-decoration-line: underline;
 }
 
-.banner-image {
+.banner_image {
   position: relative;
   margin-top: 4rem;
   @media (min-width: $desktop) {
@@ -78,7 +75,7 @@
   }
 }
 
-.banner-image-oval {
+.banner_image_oval {
   position: absolute;
   top: 1rem;
   left: 50%;
@@ -87,7 +84,7 @@
   z-index: 1;
 }
 
-.banner-imagem-people {
+.banner_imagem_people {
   position: relative;
   width: 100%;
   z-index: 1;

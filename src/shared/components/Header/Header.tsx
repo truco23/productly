@@ -1,122 +1,126 @@
 import React, { FC, useState } from 'react';
 import { Row, Container, Visible, Col } from 'react-grid-system';
 // imports
-import './header.scss';
 import logo from '../../../utils/images/logo.svg';
-import { menu } from '../../../utils/helpers/menu'
+import { menu } from '../../../utils/helpers/menu';
+import styles from './header.module.scss';
 
-export interface HeaderProps { }
+export interface HeaderProps {}
 
-const Logo = () => {
+const HeaderLogoInternal: FC = () => {
   return (
     <h1>
       <img src={logo} alt="logo" />
     </h1>
-  )
-}
+  );
+};
 
-const MenuSmall = () => {
+const HeaderMenuSmallInternal: FC = () => {
   // state
   const [meunuToggle, setMenuToggle] = useState(false);
 
   return (
     <>
       <Visible xs sm md>
-        <div className="header-menu-open" onClick={() => setMenuToggle(!meunuToggle)}>
-          <span className={'header-icon-burguer'}></span>
-          <span className={'header-icon-burguer'}></span>
-          <span className={'header-icon-burguer'}></span>
+        <div
+          className={styles.header_menu_open}
+          onClick={() => setMenuToggle(!meunuToggle)}
+        >
+          <span className={styles.header_icon_burguer}></span>
+          <span className={styles.header_icon_burguer}></span>
+          <span className={styles.header_icon_burguer}></span>
         </div>
       </Visible>
 
       <ul
-        className={`header-menu header-menu-small ${meunuToggle ? 'show' : 'hide'}`}
-        onClick={() => setMenuToggle(!meunuToggle)}>
-        <li className="header-menu-close">X</li>
-        {
-          menu.map(item => (
-            <li key={item.item}>
-              <a
-                className={`header-menu-link ${item.active}`}
-                href={`#${item.link}`}>{item.item}</a>
-            </li>
-          ))
-        }
+        className={`${styles.header_menu} ${styles.header_menu_small} ${
+          meunuToggle ? styles.show : styles.hide
+        }`}
+        onClick={() => setMenuToggle(!meunuToggle)}
+      >
+        <li className={styles.header_menu_close}>X</li>
+        {menu.map(item => (
+          <li key={item.item}>
+            <a
+              className={`${styles.header_menu_link} ${item.active}`}
+              href={`#${item.link}`}
+            >
+              {item.item}
+            </a>
+          </li>
+        ))}
       </ul>
       <div
-        className={`${meunuToggle && 'overlay'}`}
-        onClick={() => setMenuToggle(!meunuToggle)}></div>
+        className={`${meunuToggle && styles.overlay}`}
+        onClick={() => setMenuToggle(!meunuToggle)}
+      ></div>
     </>
-  )
-}
+  );
+};
 
-const MenuDefault = () => {
+const HeaderMenuDefaultInternal: FC = () => {
   return (
-    <>
-      <ul
-        className={`header-menu header-menu-default`}>
-        {
-          menu.map(item => (
-            <li key={item.item}>
-              <a
-                className={`header-menu-link ${item.active}`}
-                href={`#${item.link}`}>{item.item}</a>
-            </li>
-          ))
-        }
+    <Visible lg xl>
+      <ul className={`${styles.header_menu} ${styles.header_menu_default}`}>
+        {menu.map(item => (
+          <li key={item.item}>
+            <a
+              className={`${styles.header_menu_link} ${item.active}`}
+              href={`#${item.link}`}
+            >
+              {item.item}
+            </a>
+          </li>
+        ))}
       </ul>
-    </>
-  )
-}
+    </Visible>
+  );
+};
 
-const Menu = () => {
+const HeaderMenuInternal: FC = () => {
   return (
     <>
-      <Visible xs sm md>
-        <MenuSmall />
-      </Visible>
-
-      <Visible lg xl>
-        <MenuDefault />
-      </Visible>
+      <HeaderMenuSmallInternal />
+      <HeaderMenuDefaultInternal />
     </>
-  )
-}
+  );
+};
 
-const Authenticate = () => {
+const HeaderAuthenticateInternal: FC = () => {
   return (
-    <div className="header-wrapper-authenticate">
-      <button className="header-btn header-btn-signin">Sign In</button>
-      <button className="header-btn header-btn-signup">Sign Up</button>
+    <div className={styles.header_wrapper_authenticate}>
+      <button className={`${styles.header_btn} ${styles.header_btn_signin}`}>
+        Sign In
+      </button>
+      <button className={`${styles.header_btn} ${styles.header_btn_signup}`}>
+        Sign Up
+      </button>
     </div>
-  )
-}
+  );
+};
 
-const Nav = () => {
-  return (
-    <nav className="header-nav flex">
-      <Menu />
-      <Authenticate />
-    </nav>
-  )
-}
+const HeaderNavInternal: FC = () => {
+  return <HeaderMenuInternal />;
+};
 
 const Header: FC<HeaderProps> = () => {
-
   return (
-    <header className="header">
+    <header className={styles.header}>
       <Container>
         <Row>
           <Col md={3}>
-            <Logo />
+            <HeaderLogoInternal />
           </Col>
 
           <Col md={9}>
-            <Nav />
+            <nav className={`${styles.header_nav}`}>
+              <HeaderNavInternal />
+              <HeaderAuthenticateInternal />
+            </nav>
           </Col>
         </Row>
       </Container>
-    </header >
+    </header>
   );
 };
 
