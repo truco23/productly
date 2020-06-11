@@ -86,6 +86,9 @@
   position: absolute;
   top: -37px;
   right: 15px;
+  &:hover {
+    cursor: pointer;
+  }
   @media (min-width: $tablet) {
     top: 8px;
   }
@@ -97,6 +100,9 @@
   position: absolute;
   top: 10px;
   right: 10px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 // authenticate

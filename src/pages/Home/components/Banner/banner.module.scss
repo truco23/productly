@@ -9,6 +9,10 @@
   }
 }
 
+.banner_description {
+  width: 100%;
+}
+
 .banner_description_title {
   color: $gray-secondary;
   font-style: normal;
@@ -70,6 +74,7 @@
 .banner_image {
   position: relative;
   margin-top: 4rem;
+  width: 100%;
   @media (min-width: $desktop) {
     margin-left: 4rem;
   }
